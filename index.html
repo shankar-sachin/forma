@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>Forma — Text, tidied.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Forma home"><span class="brand-mark">f<span>.</span></span>forma</a>
+      <span class="header-caption">THE LITTLE TEXT STUDIO</span>
+      <span class="private"><span></span> Local & private</span>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="intro-copy">
+          <div class="eyebrow"><span></span> SMALL TOOL. BIG BREATH OF FRESH AIR.</div>
+          <h1>Good words.<br><span>Great shape.</span></h1>
+          <p>A little space. A little structure. A whole lot clearer.<br>Give your text a glow-up, with every word intact.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="scribble-label">a little tidying magic <span>↴</span></div>
+          <div class="paper paper-before"><span class="paper-label">BEFORE</span><div class="messy-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="paper paper-after"><span class="paper-label">AFTER <span>✦</span></span><div class="neat-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="paper-signature">Same words. New energy.</span></div>
+          <span class="art-spark">✳</span>
+        </div>
+      </section>
+      <section class="workspace" aria-label="Text beautifier">
+        <div class="toolbar">
+          <div class="mode-tabs" aria-label="Formatting mode">
+            <button class="mode active" data-mode="paragraphs" aria-pressed="true"><span aria-hidden="true">¶</span> Paragraphs</button>
+            <button class="mode" data-mode="cleanup" aria-pressed="false">Spacing only</button>
+          </div>
+          <div class="toolbar-options">
+            <label for="length">Paragraph length</label>
+            <select id="length"><option value="2">Short</option><option value="3" selected>Balanced</option><option value="5">Long</option></select>
+          </div>
+        </div>
+        <div class="editors">
+          <section class="editor-pane input-pane">
+            <div class="pane-heading"><h2><span class="step">01</span> Original text</h2><button id="sample" class="text-button">Try an example <span aria-hidden="true">↗</span></button></div>
+            <label class="sr-only" for="input">Original text</label>
+            <textarea id="input" spellcheck="false" placeholder="Paste your text here.&#10;&#10;Messy notes, long paragraphs, a draft that needs a little space… let's tidy it up."></textarea>
+            <div class="pane-footer"><span id="input-count">0 words · 0 characters</span><button id="clear" class="text-button" disabled>Clear</button></div>
+          </section>
+          <section class="editor-pane output-pane">
+            <div class="pane-heading"><h2><span class="step">02</span> The glow-up</h2><span class="live-badge"><span></span> LIVE PREVIEW</span></div>
+            <div class="output-wrap">
+              <label class="sr-only" for="output">Formatted text</label>
+              <textarea id="output" readonly spellcheck="false" hidden></textarea>
+              <div class="empty-state" id="empty"><div class="empty-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Clarity looks good on you.</h3><p>Paste your text on the left.<br>We’ll make a little room for it.</p></div>
+            </div>
+            <div class="pane-footer"><span id="output-count">Ready when you are</span><span class="verified" id="verified" hidden>✓ Content preserved</span></div>
+          </section>
+        </div>
+        <div class="action-bar"><div class="preserve-note"><span aria-hidden="true">◇</span><p>Only the whitespace changes.<br><span>No rewriting. No missing words.</span></p></div><div class="actions"><button class="download-button" id="download" disabled><span aria-hidden="true">↓</span> Download .txt</button><button class="copy-button" id="copy" disabled><span aria-hidden="true">▣</span> Copy text</button></div></div>
+      </section>
+      <div class="details"><span><span aria-hidden="true">✓</span> Instant formatting</span><span><span aria-hidden="true">✓</span> No account needed</span><span><span aria-hidden="true">✓</span> Never leaves your browser</span></div>
+      <p class="format-note">Existing paragraph breaks, lists, and fenced code blocks are kept. Paragraphs are grouped by sentence; punctuation is never added.</p>
+    </main>
+    <footer><span class="footer-brand">forma<span>✦</span></span><span>A little more space for what you have to say.</span><span>WORDS IN. CLARITY OUT. ↗</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
