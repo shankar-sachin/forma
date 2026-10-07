@@ -13,4 +13,4 @@ Open `index.html` in a browser. No installation or build step is needed.
 Paragraph grouping uses sentence punctuation and uppercase sentence starts. It is a conservative heuristic, not a grammar or semantic editor. It never adds punctuation. For arbitrary code or whitespace-sensitive data, retain the original file; use fenced code blocks to preserve its formatting.
 
 Run verification with `node test.js`.
-# beautifier
+
